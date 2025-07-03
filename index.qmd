@@ -20,76 +20,18 @@ knitr:
 from: markdown+emoji
 ---
 
-##
+## 
 
-<div style="text-align: center;">
-  ![](images/hex.png){width="65%"}
-</div>
-
-# Un poco de historia
-
-## Crecer en comunidad
-::: r-stack
-
-
-![](images/codehero.png){.fragment top=250 left=0 width="70%"}
-
-[](images/inicio.jfif){.fragment top=100 left=0 width="80%"}
-
-![](images/rladiesba.jpeg){.fragment top=100 left=0 width="80%"}
-
-![](images/rladiesba2.jfif){.fragment top=100 left=0 width="80%"}
-
-![](images/rladiesba3.png){.fragment top=100 left=0 width="80%"}
-
-![](images/latinr2021.jfif){.fragment top=100 left=0 width="80%"}
-
-![](images/indec.jpeg){.fragment top=70 right=50 width="70%"}
-
-![](images/posit1.jpg){.fragment top=70 right=50 width="70%"}
-
-![](images/posit2.jpg){.fragment top=70 right=50 width="70%"}
-
-![](images/ropensci-team.png){.fragment top=70 right=50 width="80%"}
-
+::: {style="text-align: center;"}
+![](images/hex.png){width="40%"}
 :::
 
-## **`arcenso`** 
-<br>
-<br>
 
-> Es un proyecto apoyado por el **Programa de Campeones y Campeonas de rOpenSci** cohorte 2023-2024, con Andrea Gómez Vargas como desarrolladora principal, Emanuel Ciardullo como co-desarrollador y Luis D. Verde como mentor.
+## **`arcenso`**
 
-## Equipo
+Supported by the rOpenSci Champions Program cohort 2023-2024^[[Introducing rOpenSci Champions - Cohort 2023-2024](https://ropensci.org/blog/2024/02/15/champions-program-champions-2024/)], this project is led by lead developer Andrea Gómez Vargas, co-developer Emanuel Ciardullo, and mentor Luis D. Verde.
 
-:::::: columns
-::: {.column width="33%"}
-![](https://avatars.githubusercontent.com/u/45582182?v=4){width="60%" style="border-radius: 80%;"}
-<span style="font-size: 15px;">Andre</span>
-
-![](images/luis.png){width="60%" style="border-radius: 80%;"}
-<span style="font-size: 15px;">Luis</span>
-:::
-
-::: {.column width="33%"}
-![](https://avatars.githubusercontent.com/u/64991969?v=4){width="60%" style="border-radius: 80%;"}
-<span style="font-size: 15px;">Ema</span>
-
-![](images/tami.jpeg){width="60%" style="border-radius: 80%;"}
-<span style="font-size: 15px;">Tami</span>
-:::
-
-::: {.column width="33%"}
-
-<br>
-<br>
-![](images/fito.jpg){width="70%" style="border-radius: 80%;"}
-
-<span style="font-size: 18px;">Fito - supervisor</span>
-
-:::
-::::::
-
+It is a citizen-driven initiative that emerged from our professional experience working with census data at the National Institute of Statistics and Census of Argentina (INDEC).
 
 
 # rOpenSci Champions Program ⭐⭐⭐
@@ -98,17 +40,15 @@ from: markdown+emoji
 
 ::::: columns
 ::: {.column width="65%"}
-
 El programa se diseña para identificar, reconocer y premiar a miembros apasionados de las comunidades.
 
-Con una duración de 12 meses que incluye formación basada en cohortes, desarrollo de un proyecto y mentorias 1:1. Y un estipendio de $1.000 USD al completar el programa
+Con una duración de 12 meses que incluye formación basada en cohortes, desarrollo de un proyecto y mentorias 1:1. Y un estipendio de \$1.000 USD al completar el programa
 :::
 
 ::: {.column width="35%"}
-<br> <br><br> ![logo rOpenSci](images/SVG Brandpack/icon_lettering_white.svg)
+<br> <br><br> ![logo rOpenSci](images/SVG%20Brandpack/icon_lettering_white.svg)
 :::
 :::::
-
 
 ## ¿Cuál fue la propuesta?
 
@@ -136,8 +76,6 @@ Con una duración de 12 meses que incluye formación basada en cohortes, desarro
 
 Actualmente los resultados históricos censales de **1970, 1980, 1991, 2001, 2010 y 2022** están disponibles en distintos formatos a través de libros físicos, PDFs, archivos en formato excel o en REDATAM, sin contar con un sistema o formato unificado que permita trabajar con los datos de estos seis periodos censales como base de datos.
 
-
-
 # Proceso de trabajo
 
 ## pregunta - problema
@@ -150,10 +88,65 @@ Actualmente los resultados históricos censales de **1970, 1980, 1991, 2001, 201
 ![](images/meme.png){.fragment top="50" right="50" width="50%"}
 :::
 
+# Antes de las funciones: Marco conceptual
 
-## Antes de las funciones: diseño conceptual
 
-![](images/esquema3.png)
+## FAIR Principles{.smaller}
+
+**Findable:**
+
+Centralized census data covering six national census periods (1970–2022), openly published in a single R data package with clear versioning.
+
+**Accessible:**
+
+Publicly available, homogenized census datasets provided in open formats and accompanied by comprehensive documentation and metadata.
+
+**Interoperable:**
+
+Tidy, well-structured tables that enable easy integration with other demographic, geographic, and socioeconomic datasets within the R ecosystem.
+
+**Reusable:**
+
+Includes detailed variable descriptions, standardized coding across census years, open licensing, and reproducible data structures that facilitate long-term use and cross-study comparisons.
+
+## Census Data: Themes and Structure (UN Framework){.smaller}
+
+<br>
+
+::: {.columns}
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="30%"}
+#### Census Topics
+- **Core:** Essential variables  
+  (e.g., age, sex, population)
+- **Derived-core:** Calculated variables  
+  (e.g., fertility rates)
+- **Additional:** Country-specific topics  
+  (e.g., religion)
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="30%"}
+#### Conceptual Units
+- **Population:** Individuals
+- **Housing:** Physical dwellings
+- **Household:** People sharing a dwelling
+:::
+
+::: {.column width="30%"}
+#### Geographic Coverage
+- **National level**
+- **Jurisdictional level**
+:::
+
+:::
+
+
 
 # Problema
 
@@ -171,26 +164,70 @@ Actualmente los resultados históricos censales de **1970, 1980, 1991, 2001, 201
 ![](images/meme2.png){.fragment top="50" right="50" width="40%"}
 :::
 
-## Fabrica de excels 
+## Fabrica de excels
 
-<br>
-<br>
+<br> <br>
 
-| Año censal  | Alcance nacional | Alcance jurisdiccional | Total |
-|---------- |--------------------|---------|--------|
-| 1970      | 21         | 312      | 333      |
-| 1980      | 60         | 1176     | 1236       |
+| Año censal | Alcance nacional | Alcance jurisdiccional | Total |
+|------------|------------------|------------------------|-------|
+| 1970       | 21               | 312                    | 333   |
+| 1980       | 60               | 1176                   | 1236  |
+
 <br>
 
 > **+1500** excels por los censos de 1970 y 1980
 
 ## ¿Cómo nos organizamos?
 
-![](images/esquema2.png)
+<br>
+
+::: columns
+::: {.column width="15%"}
+
+![](images/python.png)
+<br>
+
+![](images/R.png)
+<br>
+
+![](images/github.png)
+
+:::
+
+::: {.column width="85%"}
+
+- **Download:** Automated web scraping to collect census tables from official sources.
+
+- **Select:** Listed, classified, and extracted relevant files and metadata (census year, geography, topics).
+
+- **Transform:** Converted Excel tables into tidy, standardized datasets using base R.
+
+- **Function development:** Built R functions to access, manipulate, and visualize the data efficiently.
+
+- **Package creation:** Integrated datasets and functions into the ARcenso package for easy use and reproducibility.
+
+- **Version control:** Used Git and GitHub for tracking changes, collaboration, and release management.
+ 
+:::
+
+::: 
+
+
 
 ## Etapas censales
 
-![](images/esquema1.png)
+<br>
+
+| Stage | Census years      | Geographic level               | 
+|-------|-------------------|--------------------------------|
+| 1     | 1970              | National and 24 jurisdictions  | 
+|       | 1980              | National level                 | 
+| 2     | 1991 and 2001     | National level                 |                                        
+| 3     | 2010              | National level                 |                                        
+| 4     | 2022              | National level                 |                                        
+| 5     | 1980 and 1991     | 24 jurisdictions               |                                        
+| 6     | 2001 and 2010     | 24 jurisdictions               |                                        
+| 7     | 2022              | 24 jurisdictions               |                                        
 
 
 ## Manos a la obra :hammer_and_wrench:
@@ -199,7 +236,6 @@ Actualmente los resultados históricos censales de **1970, 1980, 1991, 2001, 201
 
 ::::: columns
 ::: {.column width="15%"}
-
 ![](images/python.png) <br>
 
 ![](images/R.png)
@@ -214,13 +250,11 @@ Actualmente los resultados históricos censales de **1970, 1980, 1991, 2001, 201
 :::
 :::::
 
-
 # Armar {arcenso} :package:
 
 ## Paquetes
 
 ![hex de paquetes de trabajo](images/packages.png)
-
 
 ## ¿Cómo usarlo?
 
@@ -243,7 +277,7 @@ library(arcenso)
 
 ## Principales funciones
 
-### `get_census()` 
+### `get_census()`
 
 ```{r}
 #| eval: false
@@ -251,9 +285,10 @@ get_census(year = 1970,
            topic = "CONDICIONES HABITACIONALES", 
            geolvl = "Total del país")
 ```
+
 <br>
 
-### `check_repository()` 
+### `check_repository()`
 
 ```{r}
 #| eval: false
@@ -261,9 +296,10 @@ check_repository(year = 1970,
                  topic = "CONDICIONES HABITACIONALES", 
                  geolvl = "Total del país")
 ```
+
 <br>
 
-### `arcenso()` 
+### `arcenso()`
 
 ```{r eval=FALSE}
 arcenso() # shinyapp consulta
@@ -275,50 +311,41 @@ arcenso() # shinyapp consulta
 knitr::include_url("arcenso.html",height = 600)
 ```
 
+# Próximos pasos y metas :dizzy:
 
-# Próximos pasos y metas 💫
+## :footprints:
 
-## 👣
-
-::: {.incremental}
-
-::: columns
+:::::: incremental
+::::: columns
 ::: {.column width="40%"}
 ![](https://i.pinimg.com/originals/9f/ff/73/9fff730a3d58f7973f6e2891ee468a2d.gif)
-
 :::
 
 ::: {.column width="60%"}
-
-- mejorar la documentación 
-- continuar con el roadmap por etapas y el proceso de clasificación, revisión y formateo.
-- lograr los estandares óptimos para llegar al peer-review
-- sumar a mas usuarios a utilizar el paquete
-
+-   mejorar la documentación
+-   continuar con el roadmap por etapas y el proceso de clasificación, revisión y formateo.
+-   lograr los estandares óptimos para llegar al peer-review
+-   sumar a mas usuarios a utilizar el paquete
 :::
-:::
-:::
+:::::
+::::::
 
-
-
-# ![](images/SVG Brandpack/icon_lettering_white.svg){width="70%"} 2025
+# ![](images/SVG%20Brandpack/icon_lettering_white.svg){width="70%"} 2025
 
 ## Sumate a las actividades
-<br>
-<br>
+
+<br> <br>
 
 ::: incremental
+-   rOpenSci Champions Program 2025
 
-- rOpenSci Champions Program 2025 
+-   Software Peer Review
 
-- Software Peer Review
+-   Community Calls
 
-- Community Calls
-
-- Coworking
+-   Coworking
 :::
 
 # Preguntas :grin:
 
 # Gracias :grin:
-
