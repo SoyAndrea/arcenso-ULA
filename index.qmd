@@ -30,7 +30,7 @@ Se trata de una **iniciativa ciudadanía, que surgió a partir de nuestra experi
 
 
 
-![](images/SVG Brandpack/icon_lettering_black.svg){width="40%"}
+![](images/SVG Brandpack/icon_lettering_black.svg){width="30%"}
 
 
 ## ¿Cuál es la `propuesta`?
@@ -242,14 +242,14 @@ Incluye descripciones detalladas de variables, codificación estandarizada, lice
 
 | Stage | Census years      | Geographic level               | 
 |-------|-------------------|--------------------------------|
-| 1     | 1970              | National and 24 jurisdictions  | 
-|       | 1980              | National level                 | 
-| 2     | 1991 and 2001     | National level                 |                                        
-| 3     | 2010              | National level                 |                                        
-| 4     | 2022              | National level                 |                                        
-| 5     | 1980 and 1991     | 24 jurisdictions               |                                        
-| 6     | 2001 and 2010     | 24 jurisdictions               |                                        
-| 7     | 2022              | 24 jurisdictions               |                                        
+| 1     | 1970              | Nivel Nacional y 24 jurisdicciones  | 
+|       | 1980              | Nivel Nacional                 | 
+| 2     | 1991 and 2001     | Nivel Nacional                 |                                        
+| 3     | 2010              | Nivel Nacional                 |                                        
+| 4     | 2022              | Nivel Nacional                 |                                        
+| 5     | 1980 and 1991     | 24 jurisdicciones               |                                        
+| 6     | 2001 and 2010     | 24 jurisdicciones              |                                        
+| 7     | 2022              | 24 jurisdicciones              |                                        
 
 
 
