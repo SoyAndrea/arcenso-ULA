@@ -1,5 +1,5 @@
 ---
-title: "`R` y datos censales: sistematización reproducible con el paquete `ARcenso`"
+title: "R y datos censales: sistematización reproducible con el paquete `ARcenso`"
 author: "Andrea Gomez Vargas"
 institute: "Seminario de Ciencia Abierta"
 date: "07/03/2025"
@@ -20,45 +20,28 @@ knitr:
 from: markdown+emoji
 ---
 
-## 
-
-::: {style="text-align: center;"}
-![](images/hex.png){width="40%"}
-:::
+## **`ARcenso`** {.smaller}
 
 
-## **`arcenso`**
 
-Supported by the rOpenSci Champions Program cohort 2023-2024^[[Introducing rOpenSci Champions - Cohort 2023-2024](https://ropensci.org/blog/2024/02/15/champions-program-champions-2024/)], this project is led by lead developer Andrea Gómez Vargas, co-developer Emanuel Ciardullo, and mentor Luis D. Verde.
+Con el apoyo del Programa de Personas Campeonas de rOpenSci, cohorte 2023–2024, este proyecto está encabezado por Andrea Gómez Vargas, como de desarrolladora principal, junto a Emanuel Ciardullo como co-desarrollador y Luis D. Verde como mentor.
 
-It is a citizen-driven initiative that emerged from our professional experience working with census data at the National Institute of Statistics and Census of Argentina (INDEC).
+Se trata de una **iniciativa ciudadanía, que surgió a partir de nuestra experiencia profesional con datos censales** en el Instituto Nacional de Estadística y Censos de Argentina (INDEC).
 
 
-# rOpenSci Champions Program ⭐⭐⭐
 
-## Objetivo
+![](images/SVG Brandpack/icon_lettering_black.svg){width="40%"}
 
-::::: columns
-::: {.column width="65%"}
-El programa se diseña para identificar, reconocer y premiar a miembros apasionados de las comunidades.
 
-Con una duración de 12 meses que incluye formación basada en cohortes, desarrollo de un proyecto y mentorias 1:1. Y un estipendio de \$1.000 USD al completar el programa
-:::
-
-::: {.column width="35%"}
-<br> <br><br> ![logo rOpenSci](images/SVG%20Brandpack/icon_lettering_white.svg)
-:::
-:::::
-
-## ¿Cuál fue la propuesta?
+## ¿Cuál es la `propuesta`?
 
 <br>
 
 **Generar un paquete que permita disponer de los datos oficiales de los censos nacionales de población en Argentina** provenientes del INDEC desde 1970 hasta 2022, homogeneizados, ordenados y listos para usar.
 
-## Propuesta
+## Objetivo
 
-> De cuadros de excel a **tablas ordenadas** en R
+> Disponibilidad: de excel a **tablas ordenadas** en R
 
 ::::: columns
 ::: {.column width="70%"}
@@ -70,17 +53,47 @@ Con una duración de 12 meses que incluye formación basada en cohortes, desarro
 :::
 :::::
 
-## ¿Por qué?
+# ¿Por qué?
+
+
+## `Análisis históricos y memoria digital`
 
 <br>
 
 Actualmente los resultados históricos censales de **1970, 1980, 1991, 2001, 2010 y 2022** están disponibles en distintos formatos a través de libros físicos, PDFs, archivos en formato excel o en REDATAM, sin contar con un sistema o formato unificado que permita trabajar con los datos de estos seis periodos censales como base de datos.
 
+## `Importancia de los datos censales`
+
+::: {.incremental}
+
+- Es una herramienta clave para entender las caracteristicas y necesidades de la población.
+
+- Proporcionan datos esenciales para la planificación y el desarrollo de las políticas públicas.
+
+- Planificación social y económica
+
+- Investigación académica y estudios sociales
+
+- Investigaciones de mercado y mucho más...
+:::
+
+## `R`
+
+::: {.incremental}
+
+- `R` es una herramienta orientada al trabajo estadístico y análisis de datos.
+
+- Es un software libre y de código abierto, lo que facilita la colaboración y reproducibilidad.
+
+- Existen otros paquetes de datos censales desarrollados en `R` (por ejemplo, `censobr` para Brasil), lo que crea un ecosistema que favorece la interoperabilidad y el aprendizaje compartido.
+
+::: 
+
 # Proceso de trabajo
 
-## pregunta - problema
+## ¿Cómo empezar? `pregunta - problema`
 
-¿Cómo empezar?
+
 
 ::: r-stack
 ![](images/censos.png){.fragment top="200" left="0" width="80%"}
@@ -88,28 +101,29 @@ Actualmente los resultados históricos censales de **1970, 1980, 1991, 2001, 201
 ![](images/meme.png){.fragment top="50" right="50" width="50%"}
 :::
 
-# Antes de las funciones: Marco conceptual
+# Antes de las funciones: `Marco conceptual`
 
 
-## FAIR Principles{.smaller}
+## Principios `FAIR` {.smaller}
 
-**Findable:**
+**Localizable (`Findable`):**
 
-Centralized census data covering six national census periods (1970–2022), openly published in a single R data package with clear versioning.
+Datos censales centralizados que abarcan seis periodos censales nacionales (1970–2022)
 
-**Accessible:**
+**Accesible (`Accessible`):**
 
-Publicly available, homogenized census datasets provided in open formats and accompanied by comprehensive documentation and metadata.
+Conjuntos de datos censales públicos, homogenizados, disponibles en formatos abiertos y acompañados de documentación y metadatos completos.
 
-**Interoperable:**
+**Interoperable (`Interoperable`):**
 
-Tidy, well-structured tables that enable easy integration with other demographic, geographic, and socioeconomic datasets within the R ecosystem.
+Tablas ordenadas (formato tidy) y bien estructuradas que permiten una integración sencilla con otros conjuntos de datos.
 
-**Reusable:**
+**Reutilizable (`Reusable`):**
 
-Includes detailed variable descriptions, standardized coding across census years, open licensing, and reproducible data structures that facilitate long-term use and cross-study comparisons.
+Incluye descripciones detalladas de variables, codificación estandarizada, licencias abiertas y estructuras de datos reproducibles que facilitan su uso a largo plazo y la comparación entre estudios.
 
-## Census Data: Themes and Structure (UN Framework){.smaller}
+
+## Estructura y temas de los datos censales según la `ONU` {.smaller}
 
 <br>
 
@@ -119,38 +133,46 @@ Includes detailed variable descriptions, standardized coding across census years
 :::
 
 ::: {.column width="30%"}
-#### Census Topics
-- **Core:** Essential variables  
-  (e.g., age, sex, population)
-- **Derived-core:** Calculated variables  
-  (e.g., fertility rates)
-- **Additional:** Country-specific topics  
-  (e.g., religion)
+
+`Temas del Censo`
+**Núcleo:** Variables esenciales
+(ej.: edad, sexo, población)
+
+**Núcleo derivado:** Variables calculadas
+(ej.: tasas de fecundidad)
+
+**Adicionales:** Temas específicos del país
+(ej.: religión)
 :::
 
 ::: {.column width="5%"}
 :::
 
 ::: {.column width="30%"}
-#### Conceptual Units
-- **Population:** Individuals
-- **Housing:** Physical dwellings
-- **Household:** People sharing a dwelling
+
+`Unidades Conceptuales`
+**Población:** Personas individuales
+
+**Vivienda:** Unidades habitacionales físicas
+
+**Hogar:** Personas que comparten una vivienda
 :::
 
 ::: {.column width="30%"}
-#### Geographic Coverage
-- **National level**
-- **Jurisdictional level**
+
+`Cobertura Geográfica`
+
+**Nacional**: Total del país
+
+**Jurisdicciones**: (23 provincias de Argentina y la Ciudad Autónoma de Buenos Aires)
 :::
 
 :::
-
 
 
 # Problema
 
-## Lluvia de excels y formatos no estandarizados
+## Lluvia de excels y `formatos no estandarizados`
 
 ::: r-stack
 ![](images/lluvia.png){.fragment top="200" left="0" width="60%"}
@@ -164,9 +186,9 @@ Includes detailed variable descriptions, standardized coding across census years
 ![](images/meme2.png){.fragment top="50" right="50" width="40%"}
 :::
 
-## Fabrica de excels
+## Fabrica de excels - `trabajo en escala`
 
-<br> <br>
+<br>
 
 | Año censal | Alcance nacional | Alcance jurisdiccional | Total |
 |------------|------------------|------------------------|-------|
@@ -177,9 +199,10 @@ Includes detailed variable descriptions, standardized coding across census years
 
 > **+1500** excels por los censos de 1970 y 1980
 
-## ¿Cómo nos organizamos?
+# ¿Cómo nos organizamos? {.tabla-chica}
 
-<br>
+## `Flujo de trabajo` {.smaller}
+
 
 ::: columns
 ::: {.column width="15%"}
@@ -196,27 +219,26 @@ Includes detailed variable descriptions, standardized coding across census years
 
 ::: {.column width="85%"}
 
-- **Download:** Automated web scraping to collect census tables from official sources.
+- **Descarga:** Automatización del proceso de recopilación de tablas censales desde fuentes oficiales mediante *web scraping*.
 
-- **Select:** Listed, classified, and extracted relevant files and metadata (census year, geography, topics).
+- **Selección:** Listado, clasificación y extracción de archivos y metadatos relevantes (año censal, nivel geográfico, temáticas).
 
-- **Transform:** Converted Excel tables into tidy, standardized datasets using base R.
+- **Transformación:** Conversión de tablas de Excel en conjuntos de datos ordenados (*tidy*) y estandarizados utilizando R base.
 
-- **Function development:** Built R functions to access, manipulate, and visualize the data efficiently.
+- **Desarrollo de funciones:** Creación de funciones en R para acceder, manipular y visualizar los datos de forma eficiente.
 
-- **Package creation:** Integrated datasets and functions into the ARcenso package for easy use and reproducibility.
+- **Creación del paquete:** Integración de los conjuntos de datos y funciones en el paquete `ARcenso` para facilitar su uso.
 
-- **Version control:** Used Git and GitHub for tracking changes, collaboration, and release management.
- 
+- **Control de versiones:** Uso de Git y GitHub para el seguimiento de cambios y la gestión de versiones y colaboraciones.
+
 :::
 
 ::: 
 
 
 
-## Etapas censales
+## Etapas `disponibilidad del dato`  {.tabla-chica}
 
-<br>
 
 | Stage | Census years      | Geographic level               | 
 |-------|-------------------|--------------------------------|
@@ -230,31 +252,10 @@ Includes detailed variable descriptions, standardized coding across census years
 | 7     | 2022              | 24 jurisdictions               |                                        
 
 
-## Manos a la obra :hammer_and_wrench:
 
-<br>
 
-::::: columns
-::: {.column width="15%"}
-![](images/python.png) <br>
+# `{ARcenso}` :package:
 
-![](images/R.png)
-:::
-
-::: {.column width="85%"}
--   webscraping para descarga de cuadros censales
-
--   listar los archivos descargados extrayendo su información
-
--   para la conversión de los cuadros de excel en formato tidy en Rbase
-:::
-:::::
-
-# Armar {arcenso} :package:
-
-## Paquetes
-
-![hex de paquetes de trabajo](images/packages.png)
 
 ## ¿Cómo usarlo?
 
@@ -275,40 +276,57 @@ remotes::install_github("SoyAndrea/arcenso")
 library(arcenso)
 ```
 
-## Principales funciones
+# Principales funciones
 
-### `get_census()`
+## `get_census()`
 
+
+> Obtener tablas por año o temática censal
+<br>
 ```{r}
-#| eval: false
 get_census(year = 1970, 
            topic = "CONDICIONES HABITACIONALES", 
            geolvl = "Total del país")
 ```
 
+
+
+## `check_repository()`
+
+> Chequeo de tablas dispónibles por año o temática censal
+
 <br>
 
-### `check_repository()`
-
 ```{r}
-#| eval: false
 check_repository(year = 1970, 
                  topic = "CONDICIONES HABITACIONALES", 
                  geolvl = "Total del país")
 ```
 
-<br>
 
-### `arcenso()`
+
+## `arcenso()`
+
+> tablero de consulta
 
 ```{r eval=FALSE}
 arcenso() # shinyapp consulta
 ```
 
+![](images/shiny.png){width="120%" fig-align="center"}
+
+
 ## Veamos un ejemplo práctico
 
 ```{r echo=FALSE}
-knitr::include_url("arcenso.html",height = 600)
+knitr::include_url("https://soyandrea.github.io/practicAR",height = 600)
+```
+
+
+## Documentación
+
+```{r echo=FALSE}
+knitr::include_url("https://soyandrea.github.io/arcenso/",height = 600)
 ```
 
 # Próximos pasos y metas :dizzy:
@@ -318,34 +336,68 @@ knitr::include_url("arcenso.html",height = 600)
 :::::: incremental
 ::::: columns
 ::: {.column width="40%"}
+
+<br>
+<br>
+
 ![](https://i.pinimg.com/originals/9f/ff/73/9fff730a3d58f7973f6e2891ee468a2d.gif)
 :::
 
 ::: {.column width="60%"}
 -   mejorar la documentación
 -   continuar con el roadmap por etapas y el proceso de clasificación, revisión y formateo.
--   lograr los estandares óptimos para llegar al peer-review
+-   lograr los estandares óptimos para llegar al peer-review de rOpenSci
 -   sumar a mas usuarios a utilizar el paquete
 :::
 :::::
 ::::::
 
-# ![](images/SVG%20Brandpack/icon_lettering_white.svg){width="70%"} 2025
 
-## Sumate a las actividades
-
-<br> <br>
-
-::: incremental
--   rOpenSci Champions Program 2025
-
--   Software Peer Review
-
--   Community Calls
-
--   Coworking
-:::
 
 # Preguntas :grin:
+
+
+# Comunidades de `R`
+
+## ¿Qué son?
+
+<br>
+
+Una comunidad de usuarios es un espacio donde personas con intereses compartidos se conectan para aprender, colaborar y apoyarse mutuamente.
+
+![](images/arcenso-meet.png)
+
+
+## Gracias a la comunidad
+
+<br>
+
+La retroalimentación, colaboración y apoyo de comunidades de R como rOpenSci, LatinR, Rladies+ y R en Buenos Aires, así como al trabajo conjunto con colegas de distintas disciplinas como demógrafía, estadística y sociólogía, se construyó `ARcenso`.
+
+
+
+## La participación de la comunidad aportó:
+
+- `Asistencia técnica` para resolver desafíos de codificación y manejo de datos.
+
+- `Validación`: Garantía de la calidad y usabilidad de los datos.
+
+- `Difusión`: Promoción del uso y conocimiento del paquete.
+
+- `Inspiración`: Impulso para mejoras continuas y nuevas funcionalidades.
+
+## Aprendizajes creando `ARcenso` {.smaller}
+
+1. **Paciencia en los procesos:**  Desarrollar un paquete lleva tiempo, mejorar y actualizarlo también.
+
+2. **El valor de la organización:** Tener una estructura clara para los archivos, scripts y versiones es fundamental.
+
+3. **Aprender haciendo (y equivocándose):**  
+   Muchas herramientas y conceptos se entienden realmente cuando se aplican en un proyecto concreto.
+
+4. **La comunidad como sostén y motor:** Compartir dudas, recibir consejos y celebrar avances con otras personas usuarias de R hace que el camino sea más ameno.
+
+5. **La importancia de pensar en quienes lo van a usar:** Documentar, nombrar con claridad y facilitar el acceso a los datos permite que el paquete sea útil no solo para quien lo creó, sino para muchas más personas.
+
 
 # Gracias :grin:

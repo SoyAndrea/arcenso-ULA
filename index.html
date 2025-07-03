@@ -393,7 +393,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title"><code>R</code> y datos censales: sistematización reproducible con el paquete <code>ARcenso</code></h1>
+  <h1 class="title">R y datos censales: sistematización reproducible con el paquete <code>ARcenso</code></h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -408,41 +408,21 @@ Andrea Gomez Vargas
 
   <p class="date">2025-07-03</p>
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
-<div style="text-align: center;">
-<p><img data-src="images/hex.png" style="width:40.0%"></p>
-</div>
-</section>
-<section id="arcenso" class="slide level2">
-<h2><strong><code>arcenso</code></strong></h2>
-<p>Supported by the rOpenSci Champions Program cohort 2023-2024<sup>1</sup>, this project is led by lead developer Andrea Gómez Vargas, co-developer Emanuel Ciardullo, and mentor Luis D. Verde.</p>
-<p>It is a citizen-driven initiative that emerged from our professional experience working with census data at the National Institute of Statistics and Census of Argentina (INDEC).</p>
-<aside><ol class="aside-footnotes"><li id="fn1"><p><a href="https://ropensci.org/blog/2024/02/15/champions-program-champions-2024/">Introducing rOpenSci Champions - Cohort 2023-2024</a></p></li></ol></aside></section>
-<section>
-<section id="ropensci-champions-program" class="title-slide slide level1 center">
-<h1>rOpenSci Champions Program ⭐⭐⭐</h1>
+<section id="arcenso" class="slide level2 smaller">
+<h2><strong><code>ARcenso</code></strong></h2>
+<p>Con el apoyo del Programa de Personas Campeonas de rOpenSci, cohorte 2023–2024, este proyecto está encabezado por Andrea Gómez Vargas, como de desarrolladora principal, junto a Emanuel Ciardullo como co-desarrollador y Luis D. Verde como mentor.</p>
+<p>Se trata de una <strong>iniciativa ciudadanía, que surgió a partir de nuestra experiencia profesional con datos censales</strong> en el Instituto Nacional de Estadística y Censos de Argentina (INDEC).</p>
 
-</section>
-<section id="objetivo" class="slide level2">
-<h2>Objetivo</h2>
-<div class="columns">
-<div class="column" style="width:65%;">
-<p>El programa se diseña para identificar, reconocer y premiar a miembros apasionados de las comunidades.</p>
-<p>Con una duración de 12 meses que incluye formación basada en cohortes, desarrollo de un proyecto y mentorias 1:1. Y un estipendio de $1.000 USD al completar el programa</p>
-</div><div class="column" style="width:35%;">
-<p><br> <br><br> <img data-src="images/SVG%20Brandpack/icon_lettering_white.svg" alt="logo rOpenSci"></p>
-</div></div>
-</section>
-<section id="cuál-fue-la-propuesta" class="slide level2">
-<h2>¿Cuál fue la propuesta?</h2>
+<img data-src="images/SVG%20Brandpack/icon_lettering_black.svg" style="width:40.0%" class="r-stretch"></section>
+<section id="cuál-es-la-propuesta" class="slide level2">
+<h2>¿Cuál es la <code>propuesta</code>?</h2>
 <p><br></p>
 <p><strong>Generar un paquete que permita disponer de los datos oficiales de los censos nacionales de población en Argentina</strong> provenientes del INDEC desde 1970 hasta 2022, homogeneizados, ordenados y listos para usar.</p>
 </section>
-<section id="propuesta" class="slide level2">
-<h2>Propuesta</h2>
+<section id="objetivo" class="slide level2">
+<h2>Objetivo</h2>
 <blockquote>
-<p>De cuadros de excel a <strong>tablas ordenadas</strong> en R</p>
+<p>Disponibilidad: de excel a <strong>tablas ordenadas</strong> en R</p>
 </blockquote>
 <div class="columns">
 <div class="column" style="width:70%;">
@@ -461,19 +441,45 @@ Andrea Gomez Vargas
 </div>
 </div></div>
 </section>
-<section id="por-qué" class="slide level2">
-<h2>¿Por qué?</h2>
+<section>
+<section id="por-qué" class="title-slide slide level1 center">
+<h1>¿Por qué?</h1>
+
+</section>
+<section id="análisis-históricos-y-memoria-digital" class="slide level2">
+<h2><code>Análisis históricos y memoria digital</code></h2>
 <p><br></p>
 <p>Actualmente los resultados históricos censales de <strong>1970, 1980, 1991, 2001, 2010 y 2022</strong> están disponibles en distintos formatos a través de libros físicos, PDFs, archivos en formato excel o en REDATAM, sin contar con un sistema o formato unificado que permita trabajar con los datos de estos seis periodos censales como base de datos.</p>
+</section>
+<section id="importancia-de-los-datos-censales" class="slide level2">
+<h2><code>Importancia de los datos censales</code></h2>
+<div>
+<ul>
+<li class="fragment"><p>Es una herramienta clave para entender las caracteristicas y necesidades de la población.</p></li>
+<li class="fragment"><p>Proporcionan datos esenciales para la planificación y el desarrollo de las políticas públicas.</p></li>
+<li class="fragment"><p>Planificación social y económica</p></li>
+<li class="fragment"><p>Investigación académica y estudios sociales</p></li>
+<li class="fragment"><p>Investigaciones de mercado y mucho más…</p></li>
+</ul>
+</div>
+</section>
+<section id="r" class="slide level2">
+<h2><code>R</code></h2>
+<div>
+<ul>
+<li class="fragment"><p><code>R</code> es una herramienta orientada al trabajo estadístico y análisis de datos.</p></li>
+<li class="fragment"><p>Es un software libre y de código abierto, lo que facilita la colaboración y reproducibilidad.</p></li>
+<li class="fragment"><p>Existen otros paquetes de datos censales desarrollados en <code>R</code> (por ejemplo, <code>censobr</code> para Brasil), lo que crea un ecosistema que favorece la interoperabilidad y el aprendizaje compartido.</p></li>
+</ul>
+</div>
 </section></section>
 <section>
 <section id="proceso-de-trabajo" class="title-slide slide level1 center">
 <h1>Proceso de trabajo</h1>
 
 </section>
-<section id="pregunta---problema" class="slide level2">
-<h2>pregunta - problema</h2>
-<p>¿Cómo empezar?</p>
+<section id="cómo-empezar-pregunta---problema" class="slide level2">
+<h2>¿Cómo empezar? <code>pregunta - problema</code></h2>
 <div class="r-stack">
 <p><img data-src="images/censos.png" class="fragment" style="width:80.0%" data-top="200" data-left="0"></p>
 <p><img data-src="images/meme.png" class="fragment" style="width:50.0%" data-top="50" data-right="50"></p>
@@ -481,51 +487,40 @@ Andrea Gomez Vargas
 </section></section>
 <section>
 <section id="antes-de-las-funciones-marco-conceptual" class="title-slide slide level1 center">
-<h1>Antes de las funciones: Marco conceptual</h1>
+<h1>Antes de las funciones: <code>Marco conceptual</code></h1>
 
 </section>
-<section id="fair-principles" class="slide level2 smaller">
-<h2>FAIR Principles</h2>
-<p><strong>Findable:</strong></p>
-<p>Centralized census data covering six national census periods (1970–2022), openly published in a single R data package with clear versioning.</p>
-<p><strong>Accessible:</strong></p>
-<p>Publicly available, homogenized census datasets provided in open formats and accompanied by comprehensive documentation and metadata.</p>
-<p><strong>Interoperable:</strong></p>
-<p>Tidy, well-structured tables that enable easy integration with other demographic, geographic, and socioeconomic datasets within the R ecosystem.</p>
-<p><strong>Reusable:</strong></p>
-<p>Includes detailed variable descriptions, standardized coding across census years, open licensing, and reproducible data structures that facilitate long-term use and cross-study comparisons.</p>
+<section id="principios-fair" class="slide level2 smaller">
+<h2>Principios <code>FAIR</code></h2>
+<p><strong>Localizable (<code>Findable</code>):</strong></p>
+<p>Datos censales centralizados que abarcan seis periodos censales nacionales (1970–2022)</p>
+<p><strong>Accesible (<code>Accessible</code>):</strong></p>
+<p>Conjuntos de datos censales públicos, homogenizados, disponibles en formatos abiertos y acompañados de documentación y metadatos completos.</p>
+<p><strong>Interoperable (<code>Interoperable</code>):</strong></p>
+<p>Tablas ordenadas (formato tidy) y bien estructuradas que permiten una integración sencilla con otros conjuntos de datos.</p>
+<p><strong>Reutilizable (<code>Reusable</code>):</strong></p>
+<p>Incluye descripciones detalladas de variables, codificación estandarizada, licencias abiertas y estructuras de datos reproducibles que facilitan su uso a largo plazo y la comparación entre estudios.</p>
 </section>
-<section id="census-data-themes-and-structure-un-framework" class="slide level2 smaller">
-<h2>Census Data: Themes and Structure (UN Framework)</h2>
+<section id="estructura-y-temas-de-los-datos-censales-según-la-onu" class="slide level2 smaller">
+<h2>Estructura y temas de los datos censales según la <code>ONU</code></h2>
 <p><br></p>
 <div class="columns">
 <div class="column" style="width:5%;">
 
 </div><div class="column" style="width:30%;">
-<h4 id="census-topics">Census Topics</h4>
-<ul>
-<li><strong>Core:</strong> Essential variables<br>
-(e.g., age, sex, population)</li>
-<li><strong>Derived-core:</strong> Calculated variables<br>
-(e.g., fertility rates)</li>
-<li><strong>Additional:</strong> Country-specific topics<br>
-(e.g., religion)</li>
-</ul>
+<p><code>Temas del Censo</code> <strong>Núcleo:</strong> Variables esenciales (ej.: edad, sexo, población)</p>
+<p><strong>Núcleo derivado:</strong> Variables calculadas (ej.: tasas de fecundidad)</p>
+<p><strong>Adicionales:</strong> Temas específicos del país (ej.: religión)</p>
 </div><div class="column" style="width:5%;">
 
 </div><div class="column" style="width:30%;">
-<h4 id="conceptual-units">Conceptual Units</h4>
-<ul>
-<li><strong>Population:</strong> Individuals</li>
-<li><strong>Housing:</strong> Physical dwellings</li>
-<li><strong>Household:</strong> People sharing a dwelling</li>
-</ul>
+<p><code>Unidades Conceptuales</code> <strong>Población:</strong> Personas individuales</p>
+<p><strong>Vivienda:</strong> Unidades habitacionales físicas</p>
+<p><strong>Hogar:</strong> Personas que comparten una vivienda</p>
 </div><div class="column" style="width:30%;">
-<h4 id="geographic-coverage">Geographic Coverage</h4>
-<ul>
-<li><strong>National level</strong></li>
-<li><strong>Jurisdictional level</strong></li>
-</ul>
+<p><code>Cobertura Geográfica</code></p>
+<p><strong>Nacional</strong>: Total del país</p>
+<p><strong>Jurisdicciones</strong>: (23 provincias de Argentina y la Ciudad Autónoma de Buenos Aires)</p>
 </div></div>
 </section></section>
 <section>
@@ -534,7 +529,7 @@ Andrea Gomez Vargas
 
 </section>
 <section id="lluvia-de-excels-y-formatos-no-estandarizados" class="slide level2">
-<h2>Lluvia de excels y formatos no estandarizados</h2>
+<h2>Lluvia de excels y <code>formatos no estandarizados</code></h2>
 <div class="r-stack">
 <p><img data-src="images/lluvia.png" class="fragment" style="width:60.0%" data-top="200" data-left="0"></p>
 <p><img data-src="images/cuadro2.png" class="fragment" style="width:80.0%" data-top="100" data-left="0"></p>
@@ -543,9 +538,9 @@ Andrea Gomez Vargas
 <p><img data-src="images/meme2.png" class="fragment" style="width:40.0%" data-top="50" data-right="50"></p>
 </div>
 </section>
-<section id="fabrica-de-excels" class="slide level2">
-<h2>Fabrica de excels</h2>
-<p><br> <br></p>
+<section id="fabrica-de-excels---trabajo-en-escala" class="slide level2">
+<h2>Fabrica de excels - <code>trabajo en escala</code></h2>
+<p><br></p>
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -574,10 +569,14 @@ Andrea Gomez Vargas
 <blockquote>
 <p><strong>+1500</strong> excels por los censos de 1970 y 1980</p>
 </blockquote>
+</section></section>
+<section>
+<section id="cómo-nos-organizamos" class="title-slide slide level1 tabla-chica center">
+<h1>¿Cómo nos organizamos?</h1>
+
 </section>
-<section id="cómo-nos-organizamos" class="slide level2">
-<h2>¿Cómo nos organizamos?</h2>
-<p><br></p>
+<section id="flujo-de-trabajo" class="slide level2 smaller">
+<h2><code>Flujo de trabajo</code></h2>
 <div class="columns">
 <div class="column" style="width:15%;">
 <p><img data-src="images/python.png"> <br></p>
@@ -585,18 +584,17 @@ Andrea Gomez Vargas
 <p><img data-src="images/github.png"></p>
 </div><div class="column" style="width:85%;">
 <ul>
-<li><p><strong>Download:</strong> Automated web scraping to collect census tables from official sources.</p></li>
-<li><p><strong>Select:</strong> Listed, classified, and extracted relevant files and metadata (census year, geography, topics).</p></li>
-<li><p><strong>Transform:</strong> Converted Excel tables into tidy, standardized datasets using base R.</p></li>
-<li><p><strong>Function development:</strong> Built R functions to access, manipulate, and visualize the data efficiently.</p></li>
-<li><p><strong>Package creation:</strong> Integrated datasets and functions into the ARcenso package for easy use and reproducibility.</p></li>
-<li><p><strong>Version control:</strong> Used Git and GitHub for tracking changes, collaboration, and release management.</p></li>
+<li><p><strong>Descarga:</strong> Automatización del proceso de recopilación de tablas censales desde fuentes oficiales mediante <em>web scraping</em>.</p></li>
+<li><p><strong>Selección:</strong> Listado, clasificación y extracción de archivos y metadatos relevantes (año censal, nivel geográfico, temáticas).</p></li>
+<li><p><strong>Transformación:</strong> Conversión de tablas de Excel en conjuntos de datos ordenados (<em>tidy</em>) y estandarizados utilizando R base.</p></li>
+<li><p><strong>Desarrollo de funciones:</strong> Creación de funciones en R para acceder, manipular y visualizar los datos de forma eficiente.</p></li>
+<li><p><strong>Creación del paquete:</strong> Integración de los conjuntos de datos y funciones en el paquete <code>ARcenso</code> para facilitar su uso.</p></li>
+<li><p><strong>Control de versiones:</strong> Uso de Git y GitHub para el seguimiento de cambios y la gestión de versiones y colaboraciones.</p></li>
 </ul>
 </div></div>
 </section>
-<section id="etapas-censales" class="slide level2">
-<h2>Etapas censales</h2>
-<p><br></p>
+<section id="etapas-disponibilidad-del-dato" class="slide level2 tabla-chica">
+<h2>Etapas <code>disponibilidad del dato</code></h2>
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -648,31 +646,12 @@ Andrea Gomez Vargas
 </tr>
 </tbody>
 </table>
-</section>
-<section id="manos-a-la-obra" class="slide level2">
-<h2>Manos a la obra <span class="emoji" data-emoji="hammer_and_wrench">🛠️</span></h2>
-<p><br></p>
-<div class="columns">
-<div class="column" style="width:15%;">
-<p><img data-src="images/python.png"> <br></p>
-<p><img data-src="images/R.png"></p>
-</div><div class="column" style="width:85%;">
-<ul>
-<li><p>webscraping para descarga de cuadros censales</p></li>
-<li><p>listar los archivos descargados extrayendo su información</p></li>
-<li><p>para la conversión de los cuadros de excel en formato tidy en Rbase</p></li>
-</ul>
-</div></div>
 </section></section>
 <section>
-<section id="armar-arcenso" class="title-slide slide level1 center">
-<h1>Armar {arcenso} <span class="emoji" data-emoji="package">📦</span></h1>
+<section id="arcenso-1" class="title-slide slide level1 center">
+<h1><code>{ARcenso}</code> <span class="emoji" data-emoji="package">📦</span></h1>
 
 </section>
-<section id="paquetes" class="slide level2">
-<h2>Paquetes</h2>
-
-<img data-src="images/packages.png" class="r-stretch quarto-figure-center"><p class="caption">hex de paquetes de trabajo</p></section>
 <section id="cómo-usarlo" class="slide level2">
 <h2>¿Cómo usarlo?</h2>
 <p><br></p>
@@ -686,32 +665,132 @@ Andrea Gomez Vargas
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a><span class="fu">library</span>(arcenso)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section></section>
+<section>
+<section id="principales-funciones" class="title-slide slide level1 center">
+<h1>Principales funciones</h1>
+
 </section>
-<section id="principales-funciones" class="slide level2">
-<h2>Principales funciones</h2>
-<h3 id="get_census"><code>get_census()</code></h3>
+<section id="get_census" class="slide level2">
+<h2><code>get_census()</code></h2>
+<blockquote>
+<p>Obtener tablas por año o temática censal <br></p>
+</blockquote>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a><span class="fu">get_census</span>(<span class="at">year =</span> <span class="dv">1970</span>, </span>
 <span id="cb3-2"><a href=""></a>           <span class="at">topic =</span> <span class="st">"CONDICIONES HABITACIONALES"</span>, </span>
-<span id="cb3-3"><a href=""></a>           <span class="at">geolvl =</span> <span class="st">"Total del país"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-3"><a href=""></a>           <span class="at">geolvl =</span> <span class="st">"Total del país"</span>)</span>
+<span id="cb3-4"><a href=""></a><span class="co">#&gt; $c70_total_del_pais_poblacion_c18</span></span>
+<span id="cb3-5"><a href=""></a><span class="co">#&gt;                   regimen_de_tenencia hogares personas  cuartos</span></span>
+<span id="cb3-6"><a href=""></a><span class="co">#&gt; 1                         Propietario 3553250 13778700 11197900</span></span>
+<span id="cb3-7"><a href=""></a><span class="co">#&gt; 2            Inquilino o arrendatario 1380950  4692800  3305350</span></span>
+<span id="cb3-8"><a href=""></a><span class="co">#&gt; 3 Ocupante en relación de dependencia  353300  1402500   880050</span></span>
+<span id="cb3-9"><a href=""></a><span class="co">#&gt; 4                   Ocupante gratuito  575650  2271150  1196500</span></span>
+<span id="cb3-10"><a href=""></a><span class="co">#&gt; 5                    En otro carácter  192950   816350   419800</span></span>
+<span id="cb3-11"><a href=""></a><span class="co">#&gt; </span></span>
+<span id="cb3-12"><a href=""></a><span class="co">#&gt; $c70_total_del_pais_poblacion_c20</span></span>
+<span id="cb3-13"><a href=""></a><span class="co">#&gt;     tama?o_hogar                     regimen_tenencia hogares</span></span>
+<span id="cb3-14"><a href=""></a><span class="co">#&gt; 1   De 1 persona                                Total  615900</span></span>
+<span id="cb3-15"><a href=""></a><span class="co">#&gt; 2   De 1 persona                          Propietario  255900</span></span>
+<span id="cb3-16"><a href=""></a><span class="co">#&gt; 3   De 1 persona             Inquilino o arrendatario  199350</span></span>
+<span id="cb3-17"><a href=""></a><span class="co">#&gt; 4   De 1 persona Ocupante con relación de dependencia   52600</span></span>
+<span id="cb3-18"><a href=""></a><span class="co">#&gt; 5   De 1 persona                    Ocupante gratuito   82100</span></span>
+<span id="cb3-19"><a href=""></a><span class="co">#&gt; 6   De 1 persona                                 Otro   25950</span></span>
+<span id="cb3-20"><a href=""></a><span class="co">#&gt; 7  De 2 personas                                Total 1125250</span></span>
+<span id="cb3-21"><a href=""></a><span class="co">#&gt; 8  De 2 personas                          Propietario  652950</span></span>
+<span id="cb3-22"><a href=""></a><span class="co">#&gt; 9  De 2 personas             Inquilino o arrendatario  302400</span></span>
+<span id="cb3-23"><a href=""></a><span class="co">#&gt; 10 De 2 personas Ocupante con relación de dependencia   49250</span></span>
+<span id="cb3-24"><a href=""></a><span class="co">#&gt; 11 De 2 personas                    Ocupante gratuito   91300</span></span>
+<span id="cb3-25"><a href=""></a><span class="co">#&gt; 12 De 2 personas                                 Otro   29350</span></span>
+<span id="cb3-26"><a href=""></a><span class="co">#&gt; 13 De 3 personas                                Total 1230600</span></span>
+<span id="cb3-27"><a href=""></a><span class="co">#&gt; 14 De 3 personas                          Propietario  744800</span></span>
+<span id="cb3-28"><a href=""></a><span class="co">#&gt; 15 De 3 personas             Inquilino o arrendatario  290650</span></span>
+<span id="cb3-29"><a href=""></a><span class="co">#&gt; 16 De 3 personas Ocupante con relación de dependencia   62150</span></span>
+<span id="cb3-30"><a href=""></a><span class="co">#&gt; 17 De 3 personas                    Ocupante gratuito  103200</span></span>
+<span id="cb3-31"><a href=""></a><span class="co">#&gt; 18 De 3 personas                                 Otro   29800</span></span>
+<span id="cb3-32"><a href=""></a><span class="co">#&gt; 19 De 4 personas                                Total 1255000</span></span>
+<span id="cb3-33"><a href=""></a><span class="co">#&gt; 20 De 4 personas                          Propietario  787900</span></span>
+<span id="cb3-34"><a href=""></a><span class="co">#&gt; 21 De 4 personas             Inquilino o arrendatario  266000</span></span>
+<span id="cb3-35"><a href=""></a><span class="co">#&gt; 22 De 4 personas Ocupante con relación de dependencia   65650</span></span>
+<span id="cb3-36"><a href=""></a><span class="co">#&gt; 23 De 4 personas                    Ocupante gratuito  102850</span></span>
+<span id="cb3-37"><a href=""></a><span class="co">#&gt; 24 De 4 personas                                 Otro   32600</span></span>
+<span id="cb3-38"><a href=""></a><span class="co">#&gt; 25 De 5 personas                                Total  818550</span></span>
+<span id="cb3-39"><a href=""></a><span class="co">#&gt; 26 De 5 personas                          Propietario  516100</span></span>
+<span id="cb3-40"><a href=""></a><span class="co">#&gt; 27 De 5 personas             Inquilino o arrendatario  157500</span></span>
+<span id="cb3-41"><a href=""></a><span class="co">#&gt; 28 De 5 personas Ocupante con relación de dependencia   48200</span></span>
+<span id="cb3-42"><a href=""></a><span class="co">#&gt; 29 De 5 personas                    Ocupante gratuito   71550</span></span>
+<span id="cb3-43"><a href=""></a><span class="co">#&gt; 30 De 5 personas                                 Otro   25200</span></span>
+<span id="cb3-44"><a href=""></a><span class="co">#&gt; 31 De 6 personas                                Total  443250</span></span>
+<span id="cb3-45"><a href=""></a><span class="co">#&gt; 32 De 6 personas                          Propietario  272000</span></span>
+<span id="cb3-46"><a href=""></a><span class="co">#&gt; 33 De 6 personas             Inquilino o arrendatario   80000</span></span>
+<span id="cb3-47"><a href=""></a><span class="co">#&gt; 34 De 6 personas Ocupante con relación de dependencia   29000</span></span>
+<span id="cb3-48"><a href=""></a><span class="co">#&gt; 35 De 6 personas                    Ocupante gratuito   45750</span></span>
+<span id="cb3-49"><a href=""></a><span class="co">#&gt; 36 De 6 personas                                 Otro   16500</span></span>
+<span id="cb3-50"><a href=""></a><span class="co">#&gt; 37 De 7 personas                                Total  276750</span></span>
+<span id="cb3-51"><a href=""></a><span class="co">#&gt; 38 De 7 personas                          Propietario  163400</span></span>
+<span id="cb3-52"><a href=""></a><span class="co">#&gt; 39 De 7 personas             Inquilino o arrendatario   44950</span></span>
+<span id="cb3-53"><a href=""></a><span class="co">#&gt; 40 De 7 personas Ocupante con relación de dependencia   19950</span></span>
+<span id="cb3-54"><a href=""></a><span class="co">#&gt; 41 De 7 personas                    Ocupante gratuito   35200</span></span>
+<span id="cb3-55"><a href=""></a><span class="co">#&gt; 42 De 7 personas                                 Otro   13250</span></span>
+<span id="cb3-56"><a href=""></a><span class="co">#&gt; 43 De 8 personas                                Total  121450</span></span>
+<span id="cb3-57"><a href=""></a><span class="co">#&gt; 44 De 8 personas                          Propietario   70600</span></span>
+<span id="cb3-58"><a href=""></a><span class="co">#&gt; 45 De 8 personas             Inquilino o arrendatario   18250</span></span>
+<span id="cb3-59"><a href=""></a><span class="co">#&gt; 46 De 8 personas Ocupante con relación de dependencia   10050</span></span>
+<span id="cb3-60"><a href=""></a><span class="co">#&gt; 47 De 8 personas                    Ocupante gratuito   16250</span></span>
+<span id="cb3-61"><a href=""></a><span class="co">#&gt; 48 De 8 personas                                 Otro    6300</span></span>
+<span id="cb3-62"><a href=""></a><span class="co">#&gt; 49 De 9 personas                                Total   76000</span></span>
+<span id="cb3-63"><a href=""></a><span class="co">#&gt; 50 De 9 personas                          Propietario   40950</span></span>
+<span id="cb3-64"><a href=""></a><span class="co">#&gt; 51 De 9 personas             Inquilino o arrendatario    9400</span></span>
+<span id="cb3-65"><a href=""></a><span class="co">#&gt; 52 De 9 personas Ocupante con relación de dependencia    7150</span></span>
+<span id="cb3-66"><a href=""></a><span class="co">#&gt; 53 De 9 personas                    Ocupante gratuito   12900</span></span>
+<span id="cb3-67"><a href=""></a><span class="co">#&gt; 54 De 9 personas                                 Otro    5600</span></span>
+<span id="cb3-68"><a href=""></a><span class="co">#&gt; 55   De 10 y más                                Total   93350</span></span>
+<span id="cb3-69"><a href=""></a><span class="co">#&gt; 56   De 10 y más                          Propietario   48650</span></span>
+<span id="cb3-70"><a href=""></a><span class="co">#&gt; 57   De 10 y más             Inquilino o arrendatario   12450</span></span>
+<span id="cb3-71"><a href=""></a><span class="co">#&gt; 58   De 10 y más Ocupante con relación de dependencia    9300</span></span>
+<span id="cb3-72"><a href=""></a><span class="co">#&gt; 59   De 10 y más                    Ocupante gratuito   14550</span></span>
+<span id="cb3-73"><a href=""></a><span class="co">#&gt; 60   De 10 y más                                 Otro    8400</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="check_repository" class="slide level2">
+<h2><code>check_repository()</code></h2>
+<blockquote>
+<p>Chequeo de tablas dispónibles por año o temática censal</p>
+</blockquote>
 <p><br></p>
-<h3 id="check_repository"><code>check_repository()</code></h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a><span class="fu">check_repository</span>(<span class="at">year =</span> <span class="dv">1970</span>, </span>
 <span id="cb4-2"><a href=""></a>                 <span class="at">topic =</span> <span class="st">"CONDICIONES HABITACIONALES"</span>, </span>
-<span id="cb4-3"><a href=""></a>                 <span class="at">geolvl =</span> <span class="st">"Total del país"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-3"><a href=""></a>                 <span class="at">geolvl =</span> <span class="st">"Total del país"</span>)</span>
+<span id="cb4-4"><a href=""></a><span class="co">#&gt;                            Archivo</span></span>
+<span id="cb4-5"><a href=""></a><span class="co">#&gt; 1 c70_total_del_pais_poblacion_c18</span></span>
+<span id="cb4-6"><a href=""></a><span class="co">#&gt; 2 c70_total_del_pais_poblacion_c20</span></span>
+<span id="cb4-7"><a href=""></a><span class="co">#&gt;                                                                                                      Titulo</span></span>
+<span id="cb4-8"><a href=""></a><span class="co">#&gt; 1    Cuadro 18. Total del país. Hogares particulares, personas y cuartos, por régimen de tenencia. Año 1970</span></span>
+<span id="cb4-9"><a href=""></a><span class="co">#&gt; 2 Cuadro 20. Total del país. Hogares particulares, por tamaño del hogar según régimen de tenencia. Año 1970</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><br></p>
-<h3 id="arcenso-1"><code>arcenso()</code></h3>
+</section>
+<section id="arcenso-2" class="slide level2">
+<h2><code>arcenso()</code></h2>
+<blockquote>
+<p>tablero de consulta</p>
+</blockquote>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a><span class="fu">arcenso</span>() <span class="co"># shinyapp consulta</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
+
+<img data-src="images/shiny.png" class="quarto-figure quarto-figure-center r-stretch" style="width:120.0%"></section>
 <section id="veamos-un-ejemplo-práctico" class="slide level2">
 <h2>Veamos un ejemplo práctico</h2>
 <div class="cell">
-<iframe src="arcenso.html" width="960" height="600" data-external="1">
+<iframe src="https://soyandrea.github.io/practicAR" width="960" height="600" data-external="1">
+</iframe>
+</div>
+</section>
+<section id="documentación" class="slide level2">
+<h2>Documentación</h2>
+<div class="cell">
+<iframe src="https://soyandrea.github.io/arcenso/" width="960" height="600" data-external="1">
 </iframe>
 </div>
 </section></section>
@@ -720,37 +799,21 @@ Andrea Gomez Vargas
 <h1>Próximos pasos y metas <span class="emoji" data-emoji="dizzy">💫</span></h1>
 
 </section>
-<section id="section-1" class="slide level2">
+<section id="section" class="slide level2">
 <h2><span class="emoji" data-emoji="footprints">👣</span></h2>
 <div>
 <div class="columns">
 <div class="column" style="width:40%;">
+<p><br> <br></p>
 <p><img data-src="https://i.pinimg.com/originals/9f/ff/73/9fff730a3d58f7973f6e2891ee468a2d.gif"></p>
 </div><div class="column" style="width:60%;">
 <ul>
 <li class="fragment">mejorar la documentación</li>
 <li class="fragment">continuar con el roadmap por etapas y el proceso de clasificación, revisión y formateo.</li>
-<li class="fragment">lograr los estandares óptimos para llegar al peer-review</li>
+<li class="fragment">lograr los estandares óptimos para llegar al peer-review de rOpenSci</li>
 <li class="fragment">sumar a mas usuarios a utilizar el paquete</li>
 </ul>
 </div></div>
-</div>
-</section></section>
-<section>
-<section id="section-2" class="title-slide slide level1 center">
-<h1><img data-src="images/SVG%20Brandpack/icon_lettering_white.svg" style="width:70.0%"> 2025</h1>
-
-</section>
-<section id="sumate-a-las-actividades" class="slide level2">
-<h2>Sumate a las actividades</h2>
-<p><br> <br></p>
-<div>
-<ul>
-<li class="fragment"><p>rOpenSci Champions Program 2025</p></li>
-<li class="fragment"><p>Software Peer Review</p></li>
-<li class="fragment"><p>Community Calls</p></li>
-<li class="fragment"><p>Coworking</p></li>
-</ul>
 </div>
 </section></section>
 <section id="preguntas" class="title-slide slide level1 center">
@@ -758,6 +821,42 @@ Andrea Gomez Vargas
 
 </section>
 
+<section>
+<section id="comunidades-de-r" class="title-slide slide level1 center">
+<h1>Comunidades de <code>R</code></h1>
+
+</section>
+<section id="qué-son" class="slide level2">
+<h2>¿Qué son?</h2>
+<p><br></p>
+<p>Una comunidad de usuarios es un espacio donde personas con intereses compartidos se conectan para aprender, colaborar y apoyarse mutuamente.</p>
+
+<img data-src="images/arcenso-meet.png" class="r-stretch"></section>
+<section id="gracias-a-la-comunidad" class="slide level2">
+<h2>Gracias a la comunidad</h2>
+<p><br></p>
+<p>La retroalimentación, colaboración y apoyo de comunidades de R como rOpenSci, LatinR, Rladies+ y R en Buenos Aires, así como al trabajo conjunto con colegas de distintas disciplinas como demógrafía, estadística y sociólogía, se construyó <code>ARcenso</code>.</p>
+</section>
+<section id="la-participación-de-la-comunidad-aportó" class="slide level2">
+<h2>La participación de la comunidad aportó:</h2>
+<ul>
+<li><p><code>Asistencia técnica</code> para resolver desafíos de codificación y manejo de datos.</p></li>
+<li><p><code>Validación</code>: Garantía de la calidad y usabilidad de los datos.</p></li>
+<li><p><code>Difusión</code>: Promoción del uso y conocimiento del paquete.</p></li>
+<li><p><code>Inspiración</code>: Impulso para mejoras continuas y nuevas funcionalidades.</p></li>
+</ul>
+</section>
+<section id="aprendizajes-creando-arcenso" class="slide level2 smaller">
+<h2>Aprendizajes creando <code>ARcenso</code></h2>
+<ol type="1">
+<li><p><strong>Paciencia en los procesos:</strong> Desarrollar un paquete lleva tiempo, mejorar y actualizarlo también.</p></li>
+<li><p><strong>El valor de la organización:</strong> Tener una estructura clara para los archivos, scripts y versiones es fundamental.</p></li>
+<li><p><strong>Aprender haciendo (y equivocándose):</strong><br>
+Muchas herramientas y conceptos se entienden realmente cuando se aplican en un proyecto concreto.</p></li>
+<li><p><strong>La comunidad como sostén y motor:</strong> Compartir dudas, recibir consejos y celebrar avances con otras personas usuarias de R hace que el camino sea más ameno.</p></li>
+<li><p><strong>La importancia de pensar en quienes lo van a usar:</strong> Documentar, nombrar con claridad y facilitar el acceso a los datos permite que el paquete sea útil no solo para quien lo creó, sino para muchas más personas.</p></li>
+</ol>
+</section></section>
 <section id="gracias" class="title-slide slide level1 center">
 <h1>Gracias <span class="emoji" data-emoji="grin">😁</span></h1>
 <div class="quarto-auto-generated-content">
@@ -767,8 +866,6 @@ Andrea Gomez Vargas
 </div>
 </div>
 </section>
-
-
     </div>
   </div>
 
